@@ -5,6 +5,7 @@ import Filter from "./Filter";
 
 function ShoppingList({ items }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  
   function handleCategoryChange(event) {
     setSelectedCategory(event.target.value);
   }
@@ -13,6 +14,8 @@ function ShoppingList({ items }) {
 
     return item.category === selectedCategory;
   });
+
+  // item => item.category === selectedCategory || selectedCategory === "All"
 
   return (
     <div className="ShoppingList">
